@@ -22,13 +22,7 @@
 </jar>
 </target>
 
-<!-- comment make jar or executable procedure -->
-<target name="jar" depends="compile">
-   <jar destfile="${result.jar.file}">
-    <fileset dir="${result.javaclasses.dir}">
-</fileset>
-</jar>
-</target>
+
 
 <path id="NecessaryLibraries">
         <pathelement location="./UsedLibraries/junit-4.12.jar"/>
