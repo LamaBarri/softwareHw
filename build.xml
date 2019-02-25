@@ -9,11 +9,18 @@
    <property name="result.jar.file" location="./MyProduct.jar"/>
 
    <target name="compile">
-       
-      <mkdir dir="${result.javaclasses.dir}"/>
-        <javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}">
+        <mkdir dir="${result.javaclasses.dir}"/>
+        <javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}" debug="true" includeantruntime="false">
         </javac>
    </target>
+
+<!-- comment make jar or executable procedure -->
+<target name="jar" depends="compile">
+   <jar destfile="${result.jar.file}">
+    <fileset dir="${result.javaclasses.dir}">
+</fileset>
+</jar>
+</target>
 
 <!-- comment make jar or executable procedure -->
 <target name="jar" depends="compile">
