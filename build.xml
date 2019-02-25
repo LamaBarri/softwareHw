@@ -9,7 +9,8 @@
    <property name="result.jar.file" location="./MyProduct.jar"/>
 
    <target name="compile">
-        <mkdir dir="${result.javaclasses.dir}"/>
+       
+      <mkdir dir="${result.javaclasses.dir}"/>
         <javac srcdir="${src.java.dir}" destdir="${result.javaclasses.dir}">
         </javac>
    </target>
